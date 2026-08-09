@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BON Design — Brands with impact</title>
+<meta name="description" content="Portfolio de branding, packaging y diseño digital. Creativity with strategy, design with vision.">
+<meta name="theme-color" content="#6f2b41">
+<meta property="og:title" content="BON Design — Brands with impact">
+<meta property="og:description" content="Portfolio de branding, packaging y diseño digital.">
+<meta property="og:image" content="img/header.webp">
+<meta property="og:type" content="website">
+<link rel="preload" as="image" href="img/header.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#6f2b41;
+  --label:#a3a3a3;
+  --label-soft:#c2c2c2;
+  --rule:#e8e8e8;
+  --pad:5.5vw;
+  --gap-section:6.5vw;
+  --gap-rule:1vw;
+  --gap-img:1.5vw;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;background:#fff;color:#2b2b2b;font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;width:100%;height:auto;}
+.hero,.footer>img{margin:0;}
+.project{margin-top:var(--gap-section);padding:0 var(--pad);}
+.project__head{padding-bottom:.5vw;margin-bottom:var(--gap-rule);border-bottom:1px solid var(--rule);}
+.project__title{margin:0;font-size:clamp(15px,2.3vw,34px);font-weight:200;letter-spacing:.015em;line-height:1.2;color:var(--label);}
+.project__label{display:block;margin-top:.35vw;font-size:clamp(8px,.8vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--label-soft);}
+.project__media>*+*{margin-top:var(--gap-img);}
+.screens{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--gap-img);}
+.footer{margin-top:var(--gap-section);}
+.footer__contact{padding:4vw var(--pad) 7vw;text-align:center;}
+.footer__mail{display:inline-block;font-size:clamp(11px,1.05vw,14px);letter-spacing:.1em;color:var(--wine);text-decoration:none;border-bottom:1px solid rgba(111,43,65,.28);padding-bottom:3px;}
+.footer__mail:hover{border-bottom-color:var(--wine);}
+.reveal{opacity:1;}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:3px;}
+@media (max-width:900px){.screens{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:560px){
+  :root{--pad:5vw;--gap-section:9vw;--gap-img:2vw;}
+  .screens{grid-template-columns:repeat(2,1fr);}
+  .project__title{font-size:15px;}
+  .project__label{font-size:8px;letter-spacing:.16em;}
+}
+
+.lang{position:fixed;top:14px;right:14px;z-index:50;display:flex;gap:2px;background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border:1px solid var(--rule);border-radius:2px;padding:3px;}
+.lang button{border:0;background:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:400;letter-spacing:.14em;color:var(--label);padding:4px 8px;border-radius:1px;}
+.lang button[aria-pressed="true"]{background:var(--wine);color:#fff;}
+.intro{padding:8vw var(--pad) 2vw;text-align:center;}
+.intro__kicker{margin:0 0 1.6vw;font-size:clamp(8px,.8vw,12px);font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--label-soft);}
+.intro__lead{margin:0 auto;max-width:26em;font-size:clamp(14px,1.55vw,23px);font-weight:200;line-height:1.62;color:#4a4a4a;}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;max-width:56em;margin:5vw auto 0;text-align:left;}
+.pillar h3{margin:0 0 .7em;font-size:clamp(9px,.85vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);}
+.pillar p{margin:0;font-size:clamp(11px,1.05vw,15px);font-weight:300;line-height:1.75;color:#6d6d6d;}
+.booking{margin-top:var(--gap-section);padding:7vw var(--pad);border-top:1px solid var(--rule);text-align:center;}
+.booking__kicker{margin:0 0 1.4vw;font-size:clamp(8px,.8vw,12px);font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--label-soft);}
+.booking__title{margin:0 auto 1.2em;max-width:18em;font-size:clamp(17px,2.1vw,31px);font-weight:200;line-height:1.35;color:#3d3d3d;}
+.booking__note{margin:0 auto 3vw;max-width:30em;font-size:clamp(11px,1.05vw,15px);line-height:1.75;color:#8a8a8a;}
+.booking__frame{max-width:820px;margin:0 auto;}
+.booking__frame iframe{width:100%;height:640px;border:0;display:block;}
+.booking__alt{margin:2.4vw 0 0;}
+.booking__fallback{display:inline-block;font-size:clamp(11px,1.05vw,14px);letter-spacing:.1em;color:var(--wine);text-decoration:none;border-bottom:1px solid rgba(111,43,65,.28);padding-bottom:3px;}
+.footer__end{padding:3vw var(--pad) 5vw;text-align:center;font-size:clamp(9px,.82vw,11px);letter-spacing:.18em;text-transform:uppercase;color:var(--label-soft);}
+@media (max-width:900px){.pillars{grid-template-columns:1fr;gap:2.6em;max-width:30em;text-align:center;}}
+@media (max-width:560px){.intro{padding:13vw var(--pad) 3vw;}.intro__lead{font-size:15px;}.booking{padding:13vw var(--pad);}.booking__frame iframe{height:560px;}.lang{top:10px;right:10px;}}
+</style>
+</head>
+<body>
+<nav class="lang" aria-label="Idioma">
+  <button type="button" data-lang="es" aria-pressed="true">ES</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</nav>
+<script>document.documentElement.className+=" js-on";</script>
+
+<header class="hero">
+  <img src="img/header.webp" alt="BON Design — creativity with strategy, design with vision, brands with impact" fetchpriority="high" decoding="async">
+</header>
+<section class="intro">
+  <p class="intro__kicker" data-es="Estudio de diseño boutique" data-en="Boutique design studio">Estudio de diseño boutique</p>
+  <p class="intro__lead" data-es="Trabajamos con pocas marcas por vez. No es una limitación: es la condición para que cada proyecto reciba el tiempo, la investigación y el criterio que necesita." data-en="We work with few brands at a time. It isn't a limitation: it's the condition that lets every project get the time, research and judgement it needs.">Trabajamos con pocas marcas por vez. No es una limitación: es la condición para que cada proyecto reciba el tiempo, la investigación y el criterio que necesita.</p>
+  <div class="pillars">
+    <div class="pillar">
+      <h3 data-es="Agenda acotada" data-en="Limited roster">Agenda acotada</h3>
+      <p data-es="Un número reducido de proyectos abiertos al mismo tiempo. Si entramos, entramos en serio." data-en="A small number of open projects at any given time. If we take you on, we take you on properly.">Un número reducido de proyectos abiertos al mismo tiempo. Si entramos, entramos en serio.</p>
+    </div>
+    <div class="pillar">
+      <h3 data-es="Trato directo" data-en="Direct contact">Trato directo</h3>
+      <p data-es="Hablás siempre con quien diseña. Sin intermediarios, sin cuentas que traducen lo que quisiste decir." data-en="You always speak with the person designing. No account managers translating what you meant.">Hablás siempre con quien diseña. Sin intermediarios, sin cuentas que traducen lo que quisiste decir.</p>
+    </div>
+    <div class="pillar">
+      <h3 data-es="Estrategia primero" data-en="Strategy first">Estrategia primero</h3>
+      <p data-es="Antes de la primera forma hay una decisión de posicionamiento. El diseño la ejecuta, no la reemplaza." data-en="Before the first shape there is a positioning decision. Design executes it, it doesn't replace it.">Antes de la primera forma hay una decisión de posicionamiento. El diseño la ejecuta, no la reemplaza.</p>
+    </div>
+  </div>
+</section>
+
+
+<main>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">PlantaBio App</h2><span class="project__label">Branding Design</span></div>
+  <div class="project__media">
+    <div class="screens">
+      <img src="img/planta_bio_1.webp" alt="PlantaBio — splash" loading="lazy" decoding="async">
+      <img src="img/planta_bio_2.webp" alt="PlantaBio — bienvenida" loading="lazy" decoding="async">
+      <img src="img/planta_bio_3.webp" alt="PlantaBio — registro" loading="lazy" decoding="async">
+      <img src="img/planta_bio_4.webp" alt="PlantaBio — mis plantas" loading="lazy" decoding="async">
+      <img src="img/planta_bio_5.webp" alt="PlantaBio — inicio" loading="lazy" decoding="async">
+      <img src="img/planta_bio_6.webp" alt="PlantaBio — detalle de planta" loading="lazy" decoding="async">
+    </div>
+    <img src="img/planta_bio_moodboard.webp" alt="PlantaBio — moodboard, paleta y aplicación de marca" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Reencarnaciones | Monteviejo Winery</h2><span class="project__label">Art &amp; Culture</span></div>
+  <div class="project__media"><img src="img/Reencarnaciones_PlusArte.webp" alt="Reencarnaciones — Monteviejo Winery, sistema gráfico y piezas de campaña" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Builder S.A.S.</h2><span class="project__label">Branding Design</span></div>
+  <div class="project__media"><img src="img/builder.webp" alt="Builder S.A.S. — logotipo, papelería y aplicaciones" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Zygia</h2><span class="project__label">Branding Design</span></div>
+  <div class="project__media"><img src="img/zygia.webp" alt="Grupo Zygia Desarrollos — identidad, patrones y aplicaciones" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">El Patio</h2><span class="project__label">Branding Design</span></div>
+  <div class="project__media"><img src="img/el_patio.webp" alt="El Patio Café — identidad, packaging y piezas gráficas" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Newtech</h2><span class="project__label">Branding Design</span></div>
+  <div class="project__media"><img src="img/new_tech.webp" alt="Newtech — logotipo, variantes y aplicaciones de marca" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Caminando entre Sombras</h2><span class="project__label">Packaging Design</span></div>
+  <div class="project__media"><img src="img/entre_sombras.webp" alt="Caminando entre Sombras — botella, etiqueta y campaña" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Bravard</h2><span class="project__label">Packaging Design</span></div>
+  <div class="project__media"><img src="img/bravard.webp" alt="Bravard — cerveza artesanal, identidad y packaging de la línea" loading="lazy" decoding="async"></div>
+</section>
+
+<section class="project reveal">
+  <div class="project__head"><h2 class="project__title">Wine Packaging</h2><span class="project__label">Packaging Design</span></div>
+  <div class="project__media">
+    <img src="img/wine_packaging_1.webp" alt="Wine packaging — Eracles y Virtus" loading="lazy" decoding="async">
+    <img src="img/wine_packaging_2.webp" alt="Wine packaging — etiquetas de la línea" loading="lazy" decoding="async">
+    <img src="img/wine_packaging_3.webp" alt="Wine packaging — aplicaciones" loading="lazy" decoding="async">
+  </div>
+</section>
+
+</main>
+
+
+<section class="booking" id="agenda">
+  <p class="booking__kicker" data-es="Conversemos" data-en="Let's talk">Conversemos</p>
+  <h2 class="booking__title" data-es="Media hora, sin costo, para entender qué necesita tu marca." data-en="Half an hour, free, to understand what your brand needs.">Media hora, sin costo, para entender qué necesita tu marca.</h2>
+  <p class="booking__note" data-es="Elegí el horario que te sirva y queda agendado al instante." data-en="Pick the time that works for you and it's booked instantly.">Elegí el horario que te sirva y queda agendado al instante.</p>
+  <div class="booking__frame">
+    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2hA9oXSLcgdvE_CmFRYMdFls49Rsmk72eQb0kHdg8Zt_lBI567jZgrvI18lGLDPjSkE9_dK07G?gv=true" title="Agenda BON Design" loading="lazy"></iframe>
+  </div>
+  <p class="booking__alt">
+    <a class="booking__fallback" href="https://calendar.app.google/jbtrhYBJJ8tkd8c16" target="_blank" rel="noopener" data-es="Abrir la agenda en una pestaña nueva" data-en="Open the calendar in a new tab">Abrir la agenda en una pestaña nueva</a>
+  </p>
+</section>
+<footer class="footer">
+  <img src="img/footer.webp" alt="BON Design — brands with impact" loading="lazy" decoding="async">
+  
+</footer>
+
+<script>
+var items=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -50px 0px'});
+  items.forEach(function(el){io.observe(el);});
+}else{
+  items.forEach(function(el){el.classList.add('is-in');});
+}
+</script>
+
+
+<script>
+(function(){
+  var nodes=document.querySelectorAll('[data-es]');
+  var buttons=document.querySelectorAll('.lang button');
+  function apply(lang){
+    for(var i=0;i<nodes.length;i++){
+      var t=nodes[i].getAttribute('data-'+lang);
+      if(t!==null){nodes[i].innerHTML=t;}
+    }
+    document.documentElement.lang=lang;
+    for(var j=0;j<buttons.length;j++){
+      buttons[j].setAttribute('aria-pressed', buttons[j].getAttribute('data-lang')===lang?'true':'false');
+    }
+    try{localStorage.setItem('bon-lang',lang);}catch(e){}
+  }
+  for(var k=0;k<buttons.length;k++){
+    buttons[k].addEventListener('click',function(){apply(this.getAttribute('data-lang'));});
+  }
+  var saved=null;
+  try{saved=localStorage.getItem('bon-lang');}catch(e){}
+  if(!saved&&navigator.language&&navigator.language.slice(0,2)!=='es'){saved='en';}
+  if(saved==='en'){apply('en');}
+})();
+</script>
+</body>
+</html>
