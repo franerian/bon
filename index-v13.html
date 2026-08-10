@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BON Design — Estudio de diseño boutique</title>
+<meta name="description" content="Estudio de diseño gráfico y consultoría de marca. Branding, packaging e identidad visual.">
+<meta name="theme-color" content="#6f2b41">
+<meta property="og:title" content="BON Design — Estudio de diseño boutique">
+<meta property="og:description" content="Estudio de diseño gráfico y consultoría de marca. Branding, packaging e identidad visual.">
+<meta property="og:image" content="img/header.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="/favicon.svg" color="#6f2b41">
+<link rel="preload" as="image" href="img/header.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#6f2b41;--accent:#a03d58;--accent-soft:#c9899a;--ink:#2f2f2f;--label:#9b9b9b;--label-soft:#c4c4c4;
+  --rule:#e9e6e4;--paper:#faf9f8;--board:#ffffff;
+  --shell:min(1080px, 92vw);
+  --gap-section:clamp(72px,9vw,150px);
+  --gap-board:clamp(10px,1.1vw,18px);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;width:100%;height:auto;}
+.shell{width:var(--shell);margin:0 auto;}
+.lang{position:fixed;top:16px;right:16px;z-index:60;display:flex;gap:2px;background:rgba(250,249,248,.86);backdrop-filter:blur(10px);border:1px solid var(--rule);border-radius:999px;padding:3px;}
+.lang button{border:0;background:none;cursor:pointer;font-family:inherit;font-size:10px;font-weight:400;letter-spacing:.16em;color:var(--label);padding:5px 11px;border-radius:999px;transition:background .25s,color .25s;}
+.lang button[aria-pressed="true"]{background:var(--wine);color:#fff;}
+.hero{padding:clamp(56px,8vw,110px) 0 clamp(36px,4.5vw,64px);text-align:center;}
+.hero__logo{width:min(680px,88vw);margin:0 auto;opacity:0;animation:heroIn 1.25s cubic-bezier(.22,.61,.36,1) .12s forwards;}
+@keyframes heroIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.intro{padding:0 0 clamp(20px,3vw,44px);text-align:center;}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);margin:clamp(90px,12vw,190px) auto 0;text-align:left;}
+.pillar{padding-top:16px;border-top:1px solid var(--rule);}
+.pillar h3{margin:0 0 1em;font-size:clamp(10px,1.05vw,14px);font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--wine);}
+.pillar p{margin:0;font-size:clamp(12.5px,1.05vw,15px);font-weight:300;line-height:1.9;color:#6b6b6b;}
+.project{margin-top:var(--gap-section);}
+.project__head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:12px;margin-bottom:clamp(16px,2vw,26px);border-bottom:1px solid var(--rule);}
+.project__title{margin:0;font-size:clamp(19px,2.1vw,30px);font-weight:200;letter-spacing:.01em;line-height:1.2;color:#4d4d4d;}
+.project__label{flex:none;font-size:9px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--label-soft);}
+.project__media{display:flex;flex-direction:column;gap:var(--gap-board);}
+.board{background:var(--board);border:1px solid var(--rule);border-radius:3px;overflow:hidden;}
+.screens{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--gap-board);}
+.screens .board{border-radius:2px;}
+.booking{margin-top:var(--gap-section);padding:clamp(56px,7vw,110px) 0 0;border-top:1px solid var(--rule);text-align:center;}
+.booking__kicker{margin:0 0 16px;font-size:10px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--label-soft);}
+.booking__title{margin:0 auto 1.1em;max-width:16em;font-size:clamp(19px,2.1vw,29px);font-weight:200;line-height:1.4;color:#454545;}
+.booking__note{margin:0 auto clamp(30px,4vw,52px);max-width:28em;font-size:13px;line-height:1.85;color:#8d8d8d;}
+.booking__frame{max-width:760px;margin:0 auto;background:var(--board);border:1px solid var(--rule);border-radius:3px;overflow:hidden;}
+.booking__frame iframe{width:100%;height:620px;border:0;display:block;}
+.booking__alt{margin:26px 0 0;}
+.booking__fallback{display:inline-block;font-size:12px;letter-spacing:.1em;color:var(--wine);text-decoration:none;border-bottom:1px solid rgba(111,43,65,.3);padding-bottom:3px;}
+.booking__fallback:hover{border-bottom-color:var(--wine);}
+.footer{margin-top:clamp(56px,7vw,110px);padding-bottom:clamp(44px,6vw,84px);text-align:center;}
+.footer__mark{width:100%;margin:0 auto clamp(20px,3vw,34px);}
+.footer__end{margin:0;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--label-soft);}
+a:focus-visible,button:focus-visible{outline:2px solid var(--wine);outline-offset:3px;}
+.js-on .r{opacity:0;transform:translateY(26px);}
+.js-on .r.in{opacity:1;transform:none;transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1);}
+.js-on .r.in.d1{transition-delay:.08s;}
+.js-on .r.in.d2{transition-delay:.16s;}
+.js-on .r.in.d3{transition-delay:.24s;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.js-on .r{opacity:1;transform:none;}.js-on .r.in{transition:none;}.hero__logo{opacity:1;animation:none;}}
+@media (max-width:900px){.screens{grid-template-columns:repeat(3,1fr);}.pillars{grid-template-columns:1fr;gap:0;}.pillar{padding:16px 0;}.pillar+.pillar{border-top:1px solid var(--rule);}}
+@media (max-width:560px){:root{--shell:90vw;--gap-section:64px;}.screens{grid-template-columns:repeat(2,1fr);}.project__head{flex-direction:column;align-items:flex-start;gap:4px;}.project__title{font-size:18px;}.booking__frame iframe{height:560px;}.lang{top:12px;right:12px;}}
+
+.about{margin-top:var(--gap-section);}
+.about__kicker{margin:0 0 clamp(30px,4vw,58px);font-size:clamp(11px,1.15vw,15px);font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4.5vw,76px);}
+.member__photo{width:187px;max-width:70%;aspect-ratio:187/264;background:var(--board);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-bottom:clamp(20px,2.6vw,34px);}
+.member__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.member__name{margin:0;font-size:clamp(21px,2.7vw,40px);font-weight:700;letter-spacing:.005em;line-height:1.05;text-transform:uppercase;color:var(--accent);}
+.member__role{display:block;margin-top:.62em;font-size:clamp(10px,1.05vw,14px);font-weight:300;letter-spacing:.44em;text-transform:uppercase;color:var(--accent-soft);}
+.member__bio{margin:clamp(18px,2.2vw,30px) 0 0;font-size:clamp(12.5px,1.05vw,15px);font-weight:300;line-height:1.9;color:#6b6b6b;}
+.diff{margin-top:clamp(56px,7vw,110px);padding-top:clamp(40px,5vw,72px);border-top:1px solid var(--rule);text-align:center;}
+.diff__kicker{margin:0 0 clamp(20px,2.6vw,36px);font-size:clamp(10px,1.05vw,14px);font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);}
+.diff__text{margin:0 auto;max-width:34em;font-size:clamp(13px,1.2vw,17px);font-weight:300;line-height:1.9;color:#5f5f5f;}
+.diff__text.is-close{margin-top:1.5em;max-width:30em;font-size:clamp(13.5px,1.3vw,19px);font-weight:200;color:#454545;}
+@media (max-width:760px){.team{grid-template-columns:1fr;gap:clamp(40px,8vw,64px);}}
+
+.cta{display:inline-block;margin-top:clamp(18px,2.2vw,28px);padding:11px 26px;border:1px solid var(--accent);border-radius:999px;font-size:clamp(10px,1vw,13px);font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:background .3s,color .3s;}
+.cta:hover{background:var(--accent);color:#fff;}
+.contacto{margin:clamp(34px,4.4vw,64px) auto 0;display:flex;flex-direction:column;align-items:center;gap:clamp(8px,1vw,14px);}
+.contacto a{font-size:clamp(16px,2vw,28px);font-weight:600;letter-spacing:.04em;color:var(--accent);text-decoration:none;line-height:1.25;}
+.contacto a:hover{color:var(--wine);}
+.contacto .mail{font-weight:300;letter-spacing:.12em;font-size:clamp(13px,1.5vw,21px);color:var(--accent-soft);}
+.contacto .mail:hover{color:var(--accent);}
+.totop{position:fixed;right:clamp(14px,2vw,28px);bottom:clamp(14px,2vw,28px);z-index:55;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--rule);border-radius:999px;background:rgba(250,249,248,.86);backdrop-filter:blur(10px);color:var(--label);text-decoration:none;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .4s,transform .4s,visibility .4s,color .3s,border-color .3s;}
+.totop.show{opacity:1;visibility:visible;transform:none;}
+.totop:hover{color:var(--accent);border-color:var(--accent-soft);}
+.totop svg{width:13px;height:13px;display:block;}
+@media (max-width:560px){.totop{width:36px;height:36px;}}
+</style>
+</head>
+<body>
+
+<nav class="lang" aria-label="Idioma">
+  <button type="button" data-lang="es" aria-pressed="true">ES</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__logo"><img src="img/header.webp" alt="BON Design, creativity with strategy, design with vision, brands with impact" fetchpriority="high" decoding="async"></div>
+</header>
+
+<section class="intro">
+  <div class="shell">
+    <div class="pillars">
+      <div class="pillar r d1"><h3 data-es="Agendemos una reunión" data-en="Let's meet">Agendemos una reunión</h3><p data-es="Queremos conocer tu proyecto y entender tus motivaciones, para aprovechar mejor el tiempo." data-en="We want to know your project and understand what drives it, so we make the most of the time.">Queremos conocer tu proyecto y entender tus motivaciones, para aprovechar mejor el tiempo.</p><a class="cta" href="#agenda" data-es="Conversemos" data-en="Let&rsquo;s talk">Conversemos</a></div>
+      <div class="pillar r d2"><h3 data-es="Seguimos tu visión" data-en="We follow your vision">Seguimos tu visión</h3><p data-es="Hablás siempre con quien diseña. Co creamos con vos para que tu marca sea efectiva." data-en="You always speak with the person designing. We co-create with you so your brand actually works.">Hablás siempre con quien diseña. Co creamos con vos para que tu marca sea efectiva.</p></div>
+      <div class="pillar r d3"><h3 data-es="Primero la estrategia" data-en="Strategy first">Primero la estrategia</h3><p data-es="Antes de la primera forma hay una decisión de posicionamiento. La trabajamos con vos y medimos los resultados." data-en="Before the first shape there is a positioning decision. We work on it with you and we measure the results.">Antes de la primera forma hay una decisión de posicionamiento. La trabajamos con vos y medimos los resultados.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="shell">
+    <p class="about__kicker r" data-es="Nosotras" data-en="About us">Nosotras</p>
+    <div class="team">
+      <div class="member r d1">
+        <div class="member__photo"><img src="img/noe.png" alt="Noelia Bogado, diseño gráfico en BON Design" loading="lazy" decoding="async"></div>
+        <h2 class="member__name">Noelia Bogado</h2>
+        <span class="member__role" data-es="Diseño gráfico" data-en="Graphic design">Diseño gráfico</span>
+        <p class="member__bio" data-es="Transformo ideas en identidad. Desde mi formación en Diseño Industrial con orientación gráfica, desarrollo marcas que comunican con claridad, coherencia y carácter." data-en="I turn ideas into identity. With a background in Industrial Design focused on graphics, I build brands that communicate with clarity, coherence and character.">Transformo ideas en identidad. Desde mi formación en Diseño Industrial con orientación gráfica, desarrollo marcas que comunican con claridad, coherencia y carácter.</p>
+      </div>
+      <div class="member r d2">
+        <div class="member__photo"><img src="img/ariadna.png" alt="Ariadna Ortiz, estrategia en BON Design" loading="lazy" decoding="async"></div>
+        <h2 class="member__name">Ariadna Ortiz</h2>
+        <span class="member__role" data-es="Estrategia" data-en="Strategy">Estrategia</span>
+        <p class="member__bio" data-es="Doy estructura a cada proyecto. Con mi formación como Contadora Pública, ordeno y potencio cada decisión para que las marcas funcionen y crezcan con bases sólidas." data-en="I give every project its structure. With a background as a Certified Public Accountant, I organise and sharpen each decision so brands work and grow on solid ground.">Doy estructura a cada proyecto. Con mi formación como Contadora Pública, ordeno y potencio cada decisión para que las marcas funcionen y crezcan con bases sólidas.</p>
+      </div>
+    </div>
+    <div class="diff">
+      <p class="diff__kicker r" data-es="Nuestro diferencial" data-en="What sets us apart">Nuestro diferencial</p>
+      <p class="diff__text r d1" data-es="Integramos diseño y consultoría para lograr marcas claras, coherentes y sostenibles. Aplicamos orden en cada proceso y nuestras decisiones siempre son con sentido." data-en="We bring design and consulting together to build brands that are clear, coherent and sustainable. We apply order to every process, and every decision has a reason behind it.">Integramos diseño y consultoría para lograr marcas claras, coherentes y sostenibles. Aplicamos orden en cada proceso y nuestras decisiones siempre son con sentido.</p>
+      <p class="diff__text is-close r d2" data-es="Dos disciplinas, una misma visión: crear marcas con intención, solidez y dirección." data-en="Two disciplines, one shared vision: brands built with intent, solidity and direction.">Dos disciplinas, una misma visión: crear marcas con intención, solidez y dirección.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">PlantaBio App</h2><span class="project__label" data-es="Branding Design" data-en="Branding Design">Branding Design</span></div><div class="project__media"><div class="screens"><div class="board r"><img src="img/planta_bio_1.webp" alt="PlantaBio, inicio" loading="lazy" decoding="async"></div><div class="board r d1"><img src="img/planta_bio_2.webp" alt="PlantaBio, bienvenida" loading="lazy" decoding="async"></div><div class="board r d2"><img src="img/planta_bio_3.webp" alt="PlantaBio, registro" loading="lazy" decoding="async"></div><div class="board r d3"><img src="img/planta_bio_4.webp" alt="PlantaBio, mis plantas" loading="lazy" decoding="async"></div><div class="board r d3"><img src="img/planta_bio_5.webp" alt="PlantaBio, home" loading="lazy" decoding="async"></div><div class="board r d3"><img src="img/planta_bio_6.webp" alt="PlantaBio, detalle de planta" loading="lazy" decoding="async"></div></div><div class="board r"><img src="img/planta_bio_moodboard.webp" alt="PlantaBio, moodboard y paleta" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Reencarnaciones | Monteviejo Winery</h2><span class="project__label" data-es="Arte y Cultura" data-en="Art &amp; Culture">Arte y Cultura</span></div><div class="project__media"><div class="board r"><img src="img/Reencarnaciones_PlusArte.webp" alt="Reencarnaciones, sistema grafico y campana" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Builder S.A.S.</h2><span class="project__label" data-es="Branding Design" data-en="Branding Design">Branding Design</span></div><div class="project__media"><div class="board r"><img src="img/builder.webp" alt="Builder S.A.S., logotipo y papeleria" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Zygia</h2><span class="project__label" data-es="Branding Design" data-en="Branding Design">Branding Design</span></div><div class="project__media"><div class="board r"><img src="img/zygia.webp" alt="Grupo Zygia Desarrollos, identidad" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">El Patio</h2><span class="project__label" data-es="Branding Design" data-en="Branding Design">Branding Design</span></div><div class="project__media"><div class="board r"><img src="img/el_patio.webp" alt="El Patio Cafe, identidad y packaging" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Newtech</h2><span class="project__label" data-es="Branding Design" data-en="Branding Design">Branding Design</span></div><div class="project__media"><div class="board r"><img src="img/new_tech.webp" alt="Newtech, logotipo y aplicaciones" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Caminando entre Sombras</h2><span class="project__label" data-es="Packaging Design" data-en="Packaging Design">Packaging Design</span></div><div class="project__media"><div class="board r"><img src="img/entre_sombras.webp" alt="Caminando entre Sombras, botella y etiqueta" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Bravard</h2><span class="project__label" data-es="Packaging Design" data-en="Packaging Design">Packaging Design</span></div><div class="project__media"><div class="board r"><img src="img/bravard.webp" alt="Bravard, cerveza artesanal e identidad" loading="lazy" decoding="async"></div></div></div></section>
+<section class="project"><div class="shell"><div class="project__head r"><h2 class="project__title">Wine Packaging</h2><span class="project__label" data-es="Packaging Design" data-en="Packaging Design">Packaging Design</span></div><div class="project__media"><div class="board r"><img src="img/wine_packaging_1.webp" alt="Wine packaging, Eracles y Virtus" loading="lazy" decoding="async"></div><div class="board r d1"><img src="img/wine_packaging_2.webp" alt="Wine packaging, etiquetas" loading="lazy" decoding="async"></div><div class="board r d2"><img src="img/wine_packaging_3.webp" alt="Wine packaging, aplicaciones" loading="lazy" decoding="async"></div></div></div></section>
+</main>
+
+<section class="booking" id="agenda">
+  <div class="shell">
+    <p class="booking__kicker r" data-es="Conversemos" data-en="Let's talk">Conversemos</p>
+    <h2 class="booking__title r d1" data-es="Media hora, sin costo, para entender qué necesita tu marca." data-en="Half an hour, free, to understand what your brand needs.">Media hora, sin costo, para entender qué necesita tu marca.</h2>
+    <p class="booking__note r d1" data-es="Elegí el horario que te sirva y queda agendado al instante." data-en="Pick the time that works for you and it's booked instantly.">Elegí el horario que te sirva y queda agendado al instante.</p>
+    <div class="booking__frame r d2"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2hA9oXSLcgdvE_CmFRYMdFls49Rsmk72eQb0kHdg8Zt_lBI567jZgrvI18lGLDPjSkE9_dK07G?gv=true" title="Agenda BON Design" loading="lazy"></iframe></div>
+    <div class="contacto r d2"><a href="https://wa.me/5492616816809" target="_blank" rel="noopener">+54 9 2616 81-6809</a><a class="mail" href="mailto:contacto@bon.ar">contacto@bon.ar</a></div>
+    <p class="booking__alt"><a class="booking__fallback" href="https://calendar.app.google/jbtrhYBJJ8tkd8c16" target="_blank" rel="noopener" data-es="Abrir la agenda en una pestaña nueva" data-en="Open the calendar in a new tab">Abrir la agenda en una pestaña nueva</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__mark r"><img src="img/footer.webp" alt="BON Design, brands with impact" loading="lazy" decoding="async"></div>
+  <p class="footer__end" data-es="BON Design &amp; Consulting" data-en="BON Design &amp; Consulting">BON Design &amp; Consulting</p>
+</footer>
+
+<a class="totop" href="#top" aria-label="Volver arriba" title="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.className+=' js-on';
+  var nodes=document.querySelectorAll('[data-es]');
+  var buttons=document.querySelectorAll('.lang button');
+  function apply(lang){
+    for(var i=0;i<nodes.length;i++){
+      var t=nodes[i].getAttribute('data-'+lang);
+      if(t!==null){nodes[i].innerHTML=t;}
+    }
+    root.lang=lang;
+    for(var j=0;j<buttons.length;j++){
+      buttons[j].setAttribute('aria-pressed', buttons[j].getAttribute('data-lang')===lang?'true':'false');
+    }
+    try{localStorage.setItem('bon-lang',lang);}catch(e){}
+  }
+  for(var k=0;k<buttons.length;k++){
+    buttons[k].addEventListener('click',function(){apply(this.getAttribute('data-lang'));});
+  }
+  var saved=null;
+  try{saved=localStorage.getItem('bon-lang');}catch(e){}
+  if(!saved&&navigator.language&&navigator.language.slice(0,2)!=='es'){saved='en';}
+  if(saved==='en'){apply('en');}
+  var top=document.querySelector('.totop');
+  if(top){
+    var onScroll=function(){
+      if(window.pageYOffset>700){top.classList.add('show');}else{top.classList.remove('show');}
+    };
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+  }
+  var items=document.querySelectorAll('.r');
+  if(!('IntersectionObserver' in window)){
+    for(var m=0;m<items.length;m++){items[m].classList.add('in');}
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    for(var n=0;n<entries.length;n++){
+      if(entries[n].isIntersecting){entries[n].target.classList.add('in');io.unobserve(entries[n].target);}
+    }
+  },{rootMargin:'0px 0px -12% 0px',threshold:0.06});
+  for(var p=0;p<items.length;p++){io.observe(items[p]);}
+})();
+</script>
+
+</body>
+</html>
